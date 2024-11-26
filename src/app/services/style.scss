@@ -1,0 +1,39 @@
+.services-container {
+  background: url("../../../public/images/image.png");
+  div{
+    backdrop-filter: blur(3px) brightness(.7);
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.274);
+    border-radius: 10px;
+    padding: 10px;
+    h1 {
+      font-variant: small-caps;
+      align-self: center;
+    }
+    li{
+      cursor: pointer;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // line-height: 400%;
+      align-self: center;
+      // height: 100%;
+      font-variant-caps: all-small-caps;
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+  .banner {
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.274);
+    border-radius: 10px;
+    padding: 10px;
+    aspect-ratio: 1/1;
+  }
+}

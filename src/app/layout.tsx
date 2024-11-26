@@ -17,6 +17,12 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "i use arch btw",
   description: "i use arch btw",
+  icons: "public/file.svg",
+  openGraph: {
+    title: "i use arch btw",
+    description: "i use arch btw",
+    images: ["public/next.svg"],
+  },
 };
 
 export default function RootLayout({

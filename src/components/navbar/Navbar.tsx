@@ -63,7 +63,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <DropdownMenu>
-              <DropdownMenuTrigger>reviews/clients🔻</DropdownMenuTrigger>
+              <DropdownMenuTrigger><a>reviews/clients🔻</a></DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem>
                   <Link
