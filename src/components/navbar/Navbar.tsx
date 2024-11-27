@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar z-10">
       <div className="navbar-container">
         <div className="logo">MyLogo</div>
         <div
@@ -41,14 +41,17 @@ const Navbar = () => {
             +
           </span>
           <li className="nav-item">
-            <Link className={pathname === "/" ? "active" : ""} href="/">
+            <Link
+              className={pathname === "/" ? "active" : ""}
+              href="#home-section"
+            >
               home
             </Link>
           </li>
           <li className="nav-item">
             <Link
               className={pathname === "/services" ? "active" : ""}
-              href="services"
+              href="#services-section"
             >
               services
             </Link>
@@ -56,14 +59,16 @@ const Navbar = () => {
           <li className="nav-item">
             <Link
               className={pathname === "/projects" ? "active" : ""}
-              href="projects"
+              href="#project-section"
             >
               projects
             </Link>
           </li>
           <li className="nav-item">
             <DropdownMenu>
-              <DropdownMenuTrigger><a>reviews/clients🔻</a></DropdownMenuTrigger>
+              <DropdownMenuTrigger>
+                <a>reviews/clients🔻</a>
+              </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem>
                   <Link
