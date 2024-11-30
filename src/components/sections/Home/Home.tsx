@@ -8,7 +8,7 @@ export default function Home() {
       id="home-section"
       className="hero h-dvh pt-[56px] flex gap-[10px] p-[10px]"
     >
-      <div className="info rounded-lg border flex-1 px-[10px] text-center">
+      <div className="info  py-32 rounded-lg border flex-1 px-[10px] text-center">
         <motion.h1
           className="text-[100px] font-mono font-black"
           initial={{ y: -10, opacity: 0 }}

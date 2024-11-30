@@ -1,8 +1,8 @@
 "use client";
 // Navbar.js
 import React, { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "react-scroll";
+// import { usePathname } from "next/navigation";
 
 import {
   DropdownMenu,
@@ -14,7 +14,7 @@ import {
 import "@components/navbar/style.scss"; // Import the CSS file for styling
 
 const Navbar = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -42,24 +42,35 @@ const Navbar = () => {
           </span>
           <li className="nav-item">
             <Link
-              className={pathname === "/" ? "active" : ""}
-              href="#home-section"
+              to="home-section"
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass="active"
             >
               home
             </Link>
           </li>
           <li className="nav-item">
             <Link
-              className={pathname === "/services" ? "active" : ""}
-              href="#services-section"
+              to="services-section"
+              spy={true}
+              spyThrottle={500}
+              smooth={true}
+              duration={500}
+              activeClass="active"
             >
               services
             </Link>
           </li>
           <li className="nav-item">
             <Link
-              className={pathname === "/projects" ? "active" : ""}
-              href="#project-section"
+              to="project-section"
+              spy={true}
+              smooth={true}
+              offset={-30}
+              duration={500}
+              activeClass="active"
             >
               projects
             </Link>
@@ -72,16 +83,24 @@ const Navbar = () => {
               <DropdownMenuContent>
                 <DropdownMenuItem>
                   <Link
-                    className={pathname === "/reviews" ? "active" : ""}
-                    href="reviews"
+                    to="reviews"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    activeClass="active"
                   >
                     reviews
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Link
-                    className={pathname === "/clients" ? "active" : ""}
-                    href="clients"
+                    to="clients"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    activeClass="active"
                   >
                     clients
                   </Link>

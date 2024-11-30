@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
+import Canvas from "@/components/three/Canvas";
+import React from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,11 +31,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
         className={` ${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
+        <Canvas/>
         {children}
       </body>
     </html>
