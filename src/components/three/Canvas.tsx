@@ -9,8 +9,8 @@ const DirectionalLight = new THREE.DirectionalLight(0xffffff, 10);
 const DirectionalLightHelper = new THREE.DirectionalLightHelper(
   DirectionalLight
 );
-DirectionalLight.position.set(0,3,5);
-DirectionalLight.rotation.x = 1
+DirectionalLight.position.set(0, 3, 5);
+DirectionalLight.rotation.x = 1;
 scene.add(DirectionalLight, DirectionalLightHelper);
 
 const light = new THREE.PointLight(0xffffff, 10);
@@ -23,8 +23,8 @@ scene.add(ambientLight);
 const DimondGeo = new THREE.IcosahedronGeometry();
 const DimondMat = new THREE.MeshStandardMaterial({
   color: new THREE.Color("rgb(190,190,190)"),
-  roughness: .5,
-  metalness: .9,
+  roughness: 0.5,
+  metalness: 0.9,
 });
 const Dimond = new THREE.Mesh(DimondGeo, DimondMat);
 scene.add(Dimond);
@@ -40,16 +40,15 @@ camera.position.set(0, 0, 5.0);
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-window.addEventListener("resize", onWindowResize, false);
-function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  render();
-}
-
 export default function Canvas() {
   useEffect(() => {
+    window.addEventListener("resize", onWindowResize, false);
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      render();
+    }
     document.body.appendChild(renderer.domElement);
   }, []);
 
