@@ -28,7 +28,7 @@ const DimondMat = new THREE.MeshStandardMaterial({
 });
 const Dimond = new THREE.Mesh(DimondGeo, DimondMat);
 scene.add(Dimond);
-let camera;
+let camera: THREE.PerspectiveCamera;
 const renderer = new THREE.WebGLRenderer();
 
 export default function Canvas() {
