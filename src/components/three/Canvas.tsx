@@ -28,20 +28,20 @@ const DimondMat = new THREE.MeshStandardMaterial({
 });
 const Dimond = new THREE.Mesh(DimondGeo, DimondMat);
 scene.add(Dimond);
-
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-);
-camera.position.set(0, 0, 5.0);
-
+let camera;
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
 
 export default function Canvas() {
   useEffect(() => {
+    camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+    camera.position.set(0, 0, 5.0);
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
     window.addEventListener("resize", onWindowResize, false);
     function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
