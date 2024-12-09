@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
-import Canvas from "@/components/three/Canvas";
 import React from "react";
 
 const geistSans = localFont({
@@ -37,7 +36,6 @@ export default function RootLayout({
       <body
         className={` ${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
-        <Canvas/>
         {children}
       </body>
     </html>
