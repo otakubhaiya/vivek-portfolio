@@ -12,10 +12,10 @@ export default function Clients() {
   return (
     <div
       id="client-section"
-      className=" client-container flex flex-col gap-3 pb-3"
+      className=" client-container py-14"
     >
-      <h1 className="self-center text-4xl font-mono font-black">Clients</h1>
-      <div className="clients-image-contianer grid grid-cols-3 gap-4 px-28">
+      <h1 className=" text-center text-4xl font-mono font-black pb-6">Clients</h1>
+      <div className="clients-image-contianer grid-container px-28">
         {clients()}
       </div>
     </div>
@@ -24,6 +24,6 @@ export default function Clients() {
 
 const ClientsTag = () => {
   return (
-    <div className="video aspect-square w-full bg-green-400/50 rounded-lg border border-white/50 pointer"></div>
+    <div className="video aspect-square grid-item bg-green-400/50 rounded-lg border border-white/50 pointer"></div>
   );
 };

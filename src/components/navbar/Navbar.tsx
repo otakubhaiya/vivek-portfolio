@@ -95,7 +95,7 @@ const Navbar = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Link
-                    to="clients"
+                    to="client-section"
                     spy={true}
                     smooth={true}
                     offset={50}

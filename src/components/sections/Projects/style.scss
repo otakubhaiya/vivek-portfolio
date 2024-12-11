@@ -1,0 +1,33 @@
+.folder {
+  margin: 10px;
+  cursor: pointer;
+  background-color: #89ff85;
+  background-image: url("/images/zoro.jpg");
+  background-size: cover;
+  background-position: center;
+  // width: 200px;
+  // height: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  //   mix-blend-mode: overlay;
+  position: relative;
+  //folder label
+  &:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 55px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #89ff85;
+    background-image: url("/images/zoro.jpg");
+    background-size: 500%;
+    background-position: 0px 33.9%;
+    top: -10px;
+    left: 0px;
+  }
+}
+
+// .video {
+//   flex: 0 0 calc(33.33% - 10px);
+// }
